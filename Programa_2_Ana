@@ -1,0 +1,53 @@
+/*Rosa Guadalupe Santos Valencia 20887017
+Ana yuritza Ocaña Ochoa  20887028
+ */
+using System;
+using System.Threading;
+namespace Menoramayor
+{
+	class Program
+	{
+		public static void Main(string[] args){
+			
+		int mydelay = 1000;
+		{
+
+            //Creamos un vector (Array) de enteros con una longitud de 5 elementos
+            double []numeros = new double[5];
+
+            //Solicitamos al usuario los 5 valores (desordenados)
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Ingrese un valor:");
+               
+                numeros[i] = double.Parse(Console.ReadLine());
+            
+            }                
+            
+            //Ordenamos la lista e imprimimos los valores.
+            Array.Sort(numeros);
+
+            Console.WriteLine("\nLos números ordenados de menor a mayor son:");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(numeros[i] );
+                Thread.Sleep(mydelay);
+            }
+
+            Array.Reverse(numeros);
+            Console.WriteLine("\nLos números ordenados de mayor a menor son:");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(numeros[i] );
+                Thread.Sleep(mydelay);
+            }
+
+            
+                          //Para mantener la consola abierta
+Console.ReadKey();
+        }
+    }
+	}
+ }
